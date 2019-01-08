@@ -19,6 +19,7 @@ allprojects {
     repositories {
         google()
         jcenter()
+        //--- use this maven link for pie chart
         maven { url 'https://jitpack.io' }
     }
 }

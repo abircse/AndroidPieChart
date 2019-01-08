@@ -6,9 +6,12 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.github.mikephil.charting.charts.PieChart;
+import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.data.PieEntry;
+import com.github.mikephil.charting.highlight.Highlight;
+import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
 import com.github.mikephil.charting.utils.ColorTemplate;
 
 import java.util.ArrayList;
@@ -43,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         PieDataSet dataSet = new PieDataSet(pieEntries,"EXPENSE PIE");
-        dataSet.setColors(ColorTemplate.COLORFUL_COLORS);
+        dataSet.setColors(ColorTemplate.MATERIAL_COLORS);
         dataSet.setSliceSpace(4);
 
 
@@ -58,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
         chart.setCenterText("Expense Tracker");
         chart.setCenterTextSize(15);
         chart.setCenterTextColor(R.color.colorPrimary);
+
 
         chart.invalidate();
 
