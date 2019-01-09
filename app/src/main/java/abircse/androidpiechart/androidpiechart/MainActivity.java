@@ -55,6 +55,8 @@ public class MainActivity extends AppCompatActivity {
         data.setValueTextSize(10);
         data.setValueTextColor(Color.parseColor("#FFFFFF"));
 
+//        dataSet.setSelectionShift(100);
+
         // for hide value
         data.setDrawValues(false);
 
@@ -71,6 +73,8 @@ public class MainActivity extends AppCompatActivity {
         chart.setDrawSliceText(false);
         // set animation
         chart.animateY(4000,Easing.EaseInOutCubic);
+
+
 
 
 
