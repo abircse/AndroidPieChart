@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.github.mikephil.charting.animation.Easing;
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.PieData;
@@ -68,6 +69,9 @@ public class MainActivity extends AppCompatActivity {
         chart.invalidate();
         // for hide text
         chart.setDrawSliceText(false);
+        // set animation
+        chart.animateY(4000,Easing.EaseInOutCubic);
+
 
 
 
