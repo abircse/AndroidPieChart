@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     // dummy value for pie chart
-    Float value[] = {10.5F,2.10F,5.0F,19.2F};
+    Float value[] = {10.5f,10.10F,10.0F,10.2F};
     String name[] = {"FOOD","MEDICAL","TRAVEL","PARTY"};
 
     @Override
@@ -51,7 +51,11 @@ public class MainActivity extends AppCompatActivity {
 
 
         PieData data = new PieData(dataSet);
-        data.setValueTextSize(10f);
+        data.setValueTextSize(10);
+        data.setValueTextColor(Color.parseColor("#FFFFFF"));
+
+        // for hide value
+        data.setDrawValues(false);
 
         // get chart
         PieChart chart = findViewById(R.id.piechat);
@@ -61,9 +65,9 @@ public class MainActivity extends AppCompatActivity {
         chart.setCenterText("Expense Tracker");
         chart.setCenterTextSize(15);
         chart.setCenterTextColor(R.color.colorPrimary);
-
-
         chart.invalidate();
+        // for hide text
+        chart.setDrawSliceText(false);
 
 
 
